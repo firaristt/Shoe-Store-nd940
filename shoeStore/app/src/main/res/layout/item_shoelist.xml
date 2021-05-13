@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="shoe"
+            type="com.udacity.shoestore.models.Shoe" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/itemLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp">
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/shoeAnimation"
+            android:layout_width="96dp"
+            android:layout_height="96dp"
+            android:layout_marginStart="16dp"
+            android:contentDescription="@string/add_shoe"
+            app:layout_constraintBottom_toBottomOf="@+id/itemLayout"
+            app:layout_constraintStart_toStartOf="@+id/itemLayout"
+            app:layout_constraintTop_toTopOf="@+id/itemLayout"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            app:lottie_rawRes="@raw/shoes_animated" />
+
+        <TextView
+            android:id="@+id/shoeNameStaticTextView"
+            style="@style/TextAppearance.AppCompat.Headline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="@string/shoe_name"
+            app:layout_constraintStart_toEndOf="@+id/shoeAnimation"
+            app:layout_constraintTop_toTopOf="@+id/shoeAnimation" />
+
+        <TextView
+            android:id="@+id/shoeNameText"
+            style="@style/TextAppearance.AppCompat.Headline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:text="@{shoe.name}"
+            app:layout_constraintStart_toEndOf="@+id/shoeNameStaticTextView"
+            app:layout_constraintTop_toTopOf="@+id/shoeAnimation"
+            tools:text="TestShoeName" />
+
+        <TextView
+            android:id="@+id/shoeBrandStaticTextView"
+            style="@style/TextAppearance.AppCompat.Body1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="@string/brand"
+            app:layout_constraintStart_toEndOf="@id/shoeAnimation"
+            app:layout_constraintTop_toBottomOf="@+id/shoeNameText" />
+
+        <TextView
+            android:id="@+id/shoeBrandText"
+            style="@style/TextAppearance.AppCompat.Body1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="@{shoe.company}"
+            app:layout_constraintStart_toStartOf="@+id/shoeNameText"
+            app:layout_constraintTop_toBottomOf="@+id/shoeNameText"
+            tools:text="TestCompany" />
+        <TextView
+            android:id="@+id/shoeSizeStaticTextView"
+            style="@style/TextAppearance.AppCompat.Body1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="@string/size_static"
+            app:layout_constraintStart_toEndOf="@id/shoeAnimation"
+            app:layout_constraintTop_toBottomOf="@+id/shoeBrandText" />
+        <TextView
+            android:id="@+id/shoeSizeText"
+            style="@style/TextAppearance.AppCompat.Body1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="@{Double.toString(shoe.size)}"
+            app:layout_constraintStart_toStartOf="@id/shoeBrandText"
+            app:layout_constraintTop_toBottomOf="@+id/shoeBrandText"
+            tools:text="0.0" />
+        <TextView
+            android:id="@+id/shoeDescStaticTextView"
+            style="@style/TextAppearance.AppCompat.Body1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="@string/desc"
+            app:layout_constraintStart_toEndOf="@id/shoeAnimation"
+            app:layout_constraintTop_toBottomOf="@+id/shoeSizeText" />
+        <TextView
+            android:id="@+id/shoeDescText"
+            style="@style/TextAppearance.AppCompat.Body1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{shoe.description}"
+            app:layout_constraintStart_toStartOf="@id/shoeSizeText"
+            app:layout_constraintTop_toBottomOf="@+id/shoeSizeText"
+            tools:text="TestShoeDescription" />
+
+
+        <View
+            android:id="@+id/separatorView"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_margin="8dp"
+            android:background="@color/colorPrimaryDark"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/shoeDescText" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

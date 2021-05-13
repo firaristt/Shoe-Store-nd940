@@ -1,0 +1,36 @@
+<resources>
+    <string name="app_name">ShoeStore</string>
+    <string name="username">Your name</string>
+    <string name="password_error_string">Password cannot be empty</string>
+    <string name="error_string">Value cannot be empty</string>
+
+    <string name="welcome">Welcome</string>
+    <string name="intro">Introduction</string>
+    <string name="welcome_to_store">Welcome to Shoe Store</string>
+    <string name="welcome_desc">You can add and view shoes on the next screen</string>
+    <string name="instructions">Instructions</string>
+    <string name="instructions_text1">How To Manage Your Shoe Store?</string>
+    <string name="instructions_text2">You can add new shoes to the store from the FAB at the bottom right corner.\n\nAlso you can logout by clicking on three dots on the toolbar.</string>
+
+    <string name="shoe_logo">Shoe Logo</string>
+    <string name="add_shoe">Add Shoes</string>
+    <string name="empty_list_message">Click on \'+\' to \nadd Shoe details here</string>
+    <string name="add_item">Add Shoes</string>
+
+    <string name="next">Next</string>
+    <string name="name">Name of the shoe</string>
+    <string name="company">Brand of the shoe</string>
+    <string name="description">Shoe description</string>
+    <string name="size">Size of the shoe</string>
+    <string name="type">Type</string>
+    <string name="price">Price</string>
+    <string name="save">Save</string>
+    <string name="cancel">Cancel</string>
+    <string name="logout">Logout</string>
+    <string name="size_error_string">Shoe size should be between 10 and 60</string>
+    <string name="shoes">SHOES</string>
+    <string name="shoe_name">Name:</string>
+    <string name="brand">Brand:</string>
+    <string name="size_static">Size:</string>
+    <string name="desc">Desc:</string>
+</resources>
