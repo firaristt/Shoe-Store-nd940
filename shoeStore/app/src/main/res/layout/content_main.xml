@@ -8,7 +8,8 @@
     tools:context="com.udacity.shoestore.MainActivity"
     tools:showIn="@layout/activity_main">
 
-    <!-- This layout structure is responsible for showing content (fragments) without overlapping. -->
+    <!-- This layout structure is responsible for showing content (fragments) without overlapping.
+     ConstraintLayout is a viewGroup therefore allows to use FrameLayout and fragment.-->
 
     <FrameLayout
         android:id="@+id/content_frame"
