@@ -8,6 +8,8 @@
     tools:context="com.udacity.shoestore.MainActivity"
     tools:showIn="@layout/activity_main">
 
+    <!-- This layout structure is responsible for showing content (fragments) without overlapping. -->
+
     <FrameLayout
         android:id="@+id/content_frame"
         android:layout_width="match_parent"
