@@ -2,6 +2,10 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
+    <!-- Since this screen's items needs to constraint one to another it's better to use
+     ConstraintLayout. Because it allows to constraint each element flexibly but, LinearLayout does
+     not provide such flexibility. Also LinearLayout allows only vertically or horizontally
+     placements whereas ConstraintLayout allows to place elements to any direction. -->
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"

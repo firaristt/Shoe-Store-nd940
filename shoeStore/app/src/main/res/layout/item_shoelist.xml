@@ -9,7 +9,10 @@
             name="shoe"
             type="com.udacity.shoestore.models.Shoe" />
     </data>
-
+    <!-- Since this screen's items needs to constraint one to another it's better to use
+     ConstraintLayout. Because it allows to constraint each element flexibly but, LinearLayout does
+     not provide such flexibility. Also LinearLayout allows only vertically or horizontally
+     placements whereas ConstraintLayout allows to place elements to any direction. -->
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/itemLayout"
         android:layout_width="match_parent"
@@ -70,6 +73,7 @@
             app:layout_constraintStart_toStartOf="@+id/shoeNameText"
             app:layout_constraintTop_toBottomOf="@+id/shoeNameText"
             tools:text="TestCompany" />
+
         <TextView
             android:id="@+id/shoeSizeStaticTextView"
             style="@style/TextAppearance.AppCompat.Body1"
@@ -79,6 +83,7 @@
             android:text="@string/size_static"
             app:layout_constraintStart_toEndOf="@id/shoeAnimation"
             app:layout_constraintTop_toBottomOf="@+id/shoeBrandText" />
+
         <TextView
             android:id="@+id/shoeSizeText"
             style="@style/TextAppearance.AppCompat.Body1"
@@ -89,6 +94,7 @@
             app:layout_constraintStart_toStartOf="@id/shoeBrandText"
             app:layout_constraintTop_toBottomOf="@+id/shoeBrandText"
             tools:text="0.0" />
+
         <TextView
             android:id="@+id/shoeDescStaticTextView"
             style="@style/TextAppearance.AppCompat.Body1"
@@ -98,6 +104,7 @@
             android:text="@string/desc"
             app:layout_constraintStart_toEndOf="@id/shoeAnimation"
             app:layout_constraintTop_toBottomOf="@+id/shoeSizeText" />
+
         <TextView
             android:id="@+id/shoeDescText"
             style="@style/TextAppearance.AppCompat.Body1"

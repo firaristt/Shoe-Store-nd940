@@ -2,6 +2,8 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
+    <!-- Since this screen has multiple Views and FAB should overlap to the ScrollView,
+     it's better to use ConstraintLayout. -->
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -11,6 +13,8 @@
             android:layout_height="match_parent"
             android:fillViewport="true">
 
+            <!-- There is a single element in the layout and it can be placed easily.
+             Therefore no need for ConstraintLayout.-->
             <LinearLayout
                 android:id="@+id/shoe_list"
                 android:layout_width="match_parent"

@@ -2,18 +2,24 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
+
     <data>
+
         <variable
             name="viewModel"
             type="com.udacity.shoestore.ui.viewmodels.ShoeListViewModel" />
     </data>
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".ui.activities.MainActivity"
+        android:fillViewport="true"
         android:fitsSystemWindows="true"
-        android:fillViewport="true">
-
+        tools:context=".ui.activities.MainActivity">
+        <!-- Since this screen's items needs to constraint one to another it's better to use
+         ConstraintLayout. Because it allows to constraint each element flexibly but, LinearLayout does
+         not provide such flexibility. Also LinearLayout allows only vertically or horizontally
+         placements whereas ConstraintLayout allows to place elements to any direction. -->
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -79,8 +85,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="@string/description"
-                    android:text="@={viewModel.shoe.description}"
-                    android:inputType="text"/>
+                    android:inputType="text"
+                    android:text="@={viewModel.shoe.description}" />
             </com.google.android.material.textfield.TextInputLayout>
 
 
@@ -102,7 +108,7 @@
                     android:layout_height="wrap_content"
                     android:hint="@string/size"
                     android:inputType="numberDecimal"
-                    android:text="@={viewModel.shoeSize}"/>
+                    android:text="@={viewModel.shoeSize}" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.button.MaterialButton
@@ -110,20 +116,20 @@
                 style="@style/Widget.MaterialComponents.Button.TextButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/cancel"
                 android:layout_marginBottom="16dp"
+                android:text="@string/cancel"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/saveButton"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/shoeSizeInputLayout"
-                app:layout_constraintBottom_toBottomOf="parent" />
+                app:layout_constraintTop_toBottomOf="@+id/shoeSizeInputLayout" />
 
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/saveButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/save"
                 android:layout_marginBottom="16dp"
+                android:text="@string/save"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/cancelButton"
